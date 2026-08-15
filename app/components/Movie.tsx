@@ -2,8 +2,6 @@
 import React, { useState } from 'react'
 import { MovieType } from '../../data/DummyMovies'
 
-
-
 const Movie = ({movie}:{movie:MovieType}) => {
 
     const [actorsOpen, setActorsOpen] = useState(false)
