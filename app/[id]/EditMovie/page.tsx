@@ -94,56 +94,56 @@ export default function EditMovieForm({ params }: EditMovieFormProps) {
 
   return (
     //change styling possibly
-    <div className="bg-gray-800 px-8 pt-8 pb-4 rounded-lg mb-4">
+    <div className="bg-mist-950 px-8 pt-8 pb-4 rounded-lg mb-4 min-h-screen">
       <h2 className="text-lg font-semibold mb-2 text-center border-b border-slate-600 text-slate-100">
         Edit Movie
       </h2>
       <form
-        className="flex flex-col py-2 gap-1 bg-gray-800"
+        className="flex flex-col py-2 gap-1 bg-mist-800 p-8 border border-mist-600 rounded-xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div>
-          <label className="">Title</label>
-          <input {...register("title")} className="" />
+          <label className="text-mist-100 text-lg mx-2">Title</label>
+          <input {...register("title")} className="border rounded-md border-mist-600 p-2 text-gray-900 bg-mist-200" />
           {errors.title && <p className="">{errors.title.message}</p>}
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="font-medium text-sm">Actors</label>
+          <label className="text-mist-300 text-lg mx-2">Actors</label>
           {fields.map((item, index) => (
             <div key={item.id} className="flex gap-2 items-center">
               <input
                 {...register(`actor_list.${index}.name` as const)}
-                className=""
+                className="text-mist-300"
                 placeholder={`Actor #${index + 1}`}
               />
               {fields.length > 1 && (
                 <button
                   type="button"
                   onClick={() => remove(index)}
-                  className="" /* large gray, on hover turns red */
+                  className="text-mist-300 hover:text-red-600 text-lg" /* large gray, on hover turns red */
                 >
                   x
                 </button>
               )}
             </div>
           ))}
-          {errors.actor_list && <p className="">{errors.actor_list.message}</p>}
+          {errors.actor_list && <p className="text-red-600 text-sm">{errors.actor_list.message}</p>}
           <button
             type="button"
             onClick={() => append({ name: "" })}
-            className=""
+            className="text-mist-200 text-lg p-2 border border-mist-700 rounded-md bg-mist-600 hover:bg-mist-700"
           >
             + Add Actor
           </button>
         </div>
 
         <div>
-          <label className="">Release Year</label>
+          <label className="text-mist-300 mr-2">Release Year</label>
           <input
             type="number"
             {...register("release_year", { valueAsNumber: true })}
-            className=""
+            className="border border-mist-600 bg-mist-100 text-gray-950 rounded-md p-2"
           />
           {errors.release_year && (
             <p className="">{errors.release_year.message}</p>

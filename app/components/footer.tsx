@@ -4,13 +4,13 @@ export default function Footer() {
         <footer className="mt-auto sticky bg-black p-4 text-center">
             <div className="mx-auto">
                 <div>
-                    <h2 className=" text-lg font-bold"> Internet Movies Rental Company </h2>
+                    <h2 className=" text-lg font-bold text-mist-50"> Internet Movies Rental Company </h2>
 
                     <p className="text-sm text-gray-300">For your movie renting needs.</p>
                 </div>
 
                 <div>
-                    <h2 className=" text-lg font-bolf">Contact Us</h2>
+                    <h2 className=" text-lg font-bolf text-mist-50">Contact Us</h2>
 
                     <p className="text-sm text-gray-300">Email: support@internetmovierental.com</p>
                     <p className="text-sm text-gray-300">Phone: (123) 098-5674</p>
