@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen bg-mist-950">
+    <main className=" bg-mist-950">
       {movies.map((movie) => (
         <Movie key={movie.id} movie={movie} />
       ))}

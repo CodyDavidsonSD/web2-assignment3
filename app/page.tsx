@@ -3,8 +3,8 @@
 
 export default function Home() {
   return (
-    <main className="h-screen bg-mist-950 text-center mt-6">
-      <p className="text-mist-50">
+    <main className="min-h-screen bg-mist-950 text-center ">
+      <p className="text-mist-50 mt-6 text-lg md:text-xl ">
         The start to your movie renting & watching days.
       </p>
     </main>
